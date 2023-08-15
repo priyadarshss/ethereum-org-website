@@ -57,7 +57,9 @@ const TableOfContentsLink: React.FC<{ item: Item }> = (props) => {
       display="inline-block"
       // `li :last-child` global selector wants to override this without `!important`
       mb="0.5rem !important"
-      color="text300"
+      color="primary500"
+      textDecoration="none"
+      _hover={{ textDecoration: "none", color: "primaryHover" }}
     >
       {trimmedTitle(item.title)}
     </Link>
@@ -103,14 +105,14 @@ function UpgradeTableOfContents(props: {
       as="nav"
       p={0}
       mb={8}
-      textAlign="end"
+      textAlign="start"
       overflowY="auto"
       display={{ base: "none", l: "block" }}
     >
       <List
         m={0}
         py={0}
-        ps={4}
+        ps={0}
         pe={1}
         fontSize="xl"
         fontWeight="normal"

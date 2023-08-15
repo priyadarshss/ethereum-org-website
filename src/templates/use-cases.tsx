@@ -221,8 +221,8 @@ export const InfoColumn = (props: ChildOnlyProp) => (
 
 export const InfoTitle = (props: ChildOnlyProp) => (
   <H2
-    fontSize={{ base: "2.5rem", lg: "5xl" }}
-    textAlign={{ base: "left", lg: "right" }}
+    fontSize={{ base: "2.5rem", lg: "2xl" }}
+    textAlign={{ base: "left" }}
     mt={0}
     {...props}
   />
@@ -450,7 +450,7 @@ const UseCasePage = ({
         <Show above={lgBp}>
           <InfoColumn>
             <StyledButtonDropdown list={dropdownLinks} />
-            <InfoTitle>{mdx.frontmatter.title}</InfoTitle>
+            <InfoTitle>On this page</InfoTitle>
 
             {tocItems && (
               <UpgradeTableOfContents
